@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #252a98;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        #menus{
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            height: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1440px 2fr;
+        }
+        .menus{
+            border-left: 2px solid rgba(255,255,255,0.2);
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+        #menus .live-demo{
+            background-color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            padding: 0 30px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        #menus .live-demo span{
+            font-size: 18px;
+            font-weight: bold;
+            color: #252a98;
+        }
+        .menus span{
+            color: #fff;
+            font-size: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .menus img{
+            background-color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .menus span:last-child{
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .menus span:first-child{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            padding: 0 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+        .menus-empty-row{
+            border-top: 2px solid rgba(255,255,255,0.2);
+        }
+        .border-left{
+            border-left: 2px solid rgba(255,255,255,0.2);
+        }
+
+        #slogan,#services,#cates,#slogan2,#infos{
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            display: grid;
+            grid-template-columns: 1fr 1440px 2fr;
+        }
+        #slogan2 span,#slogan span{
+            font-size: 85px;
+            color: #fff;
+            display: block;
+        }
+        #services{
+            height: 500px;
+            border-bottom: 2px solid #fff;
+        }
+        .services-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            padding: 0 100px;
+            box-sizing: border-box;
+        }
+        .services-container span{
+            font-size: 26px;
+            color: #fff;
+        }
+        .services-container  div.buttons {
+            padding-left: 120px;
+        }
+        .services-container  div.buttons div{
+            display: inline-block;
+            padding: 20px 30px;
+            border: 2px solid #fff;
+        }
+        .services-container .content {
+            margin: 30px 0 60px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .services-container .content span{
+            display: block;
+
+        }
+        svg.langs{
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .services-container .order-items{
+            padding-left: 120px;
+        }
+        .services-container .order-items span{
+            padding: 10px;
+            border-radius: 30px;
+            margin-right: 20px;
+        }
+        .services-container .order-items span.active{
+            border: 1px solid #fff;
+        }
+        #case{
+            height: 200px;
+            border-bottom: 2px solid #fff;
+        }
+        .bg-case{
+            background-color: #3337b0;
+        }
+        #case{
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            display: grid;
+            grid-template-columns: 1fr 1440px 1fr 1fr;
+        }
+        .case-container{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .case-container img{
+            background-color: #fff;
+        }
+        .case-container div:last-child{
+            background-color: #fff;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #252a98;
+            font-weight: bold;
+            padding-left: 5px;
+        }
+        .white-silder{
+            height: 100%;
+            width: 30px;
+            display: block;
+            background-color: #fff;;
+        }
+        .line{
+            display: inline-block;
+            height: 2px;
+            background-color: #252a98;
+            width: 150px;
+            margin-top: 10px;
+        }
+        #cates{
+            height: 300px;
+        }
+        .cates-container{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+        }
+        .cates-container div{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #fff;
+        }
+        .cates-container div{
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .cates-container div span{
+            display: block;
+        }
+        .cates-container div span + span{
+            height: 2px;
+            width: 120px;
+            background-color: #fff;
+            margin-top: 10px;
+        }
+        .cates-container div + div{
+            grid-column-start: 3;
+            grid-column-end: 4;
+        }
+        .slogan2-content{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            padding:60px 0;
+        }
+        .slogan2-content span{
+            font-size: 55px!important;
+        }
+        .slogan2-content-small{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: flex-start;
+            padding-top: 30px;
+        }
+        .slogan2-content-small span{
+            font-size: 22px!important;
+            text-align: center;
+        }
+        .bar1{
+            width: 100px;
+            background:  linear-gradient(to top,rgba(3,42,15,0.3), rgba(37,42,152,0.5),rgba(37,42,152,1));
+            position: absolute;
+            right: 800px;
+            bottom: 0;
+            top: 0;
+            border-left: rgba(37,42,15,0.1) 1px solid;
+            border-right: rgba(37,42,15,0.1) 1px solid;
+        }
+        .bar2{
+            width: 100px;
+            background:  linear-gradient(to top,rgba(3,42,12,0.2), rgba(37,42,152,0.3),rgba(37,42,152,1));
+            position: absolute;
+            right: 200px;
+            bottom: 0;
+            top: 0;
+            border-left: rgba(37,42,15,0.1) 1px solid;
+            border-right: rgba(37,42,15,0.1) 1px solid;
+        }
+        .bar3{
+            width: 100px;
+            background:  linear-gradient(to top,rgba(3,2,10,0.2), rgba(37,42,152,0.7),rgba(37,42,152,1));
+            position: absolute;
+            right: 400px;
+            bottom: 0;
+            top: 0;
+            border-left: rgba(37,42,15,0.1) 1px solid;
+            border-right: rgba(37,42,15,0.1) 1px solid;
+        }
+        .bar4{
+            width: 100px;
+            background: linear-gradient(to top,rgba(3,42,12,0.2), rgba(12,11,152,0.1),rgba(37,42,152,1));
+            position: absolute;
+            right: 600px;
+            bottom: 0;
+            top: 0;
+            border-left: rgba(37,42,15,0.1) 1px solid;
+            border-right: rgba(37,42,15,0.1) 1px solid;
+        }
+
+        #infos{
+            height: 500px;
+        }
+
+        .infos-container{
+            display:grid;
+            grid-template-columns: repeat(9,1fr);
+            grid-template-rows: 6;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menus">
+        <div>
+            
+        </div>
+        <div class="menus">
+            <img src="https://apenft.io/static/media/footer-partners-tronlink.2c62ef17.svg">
+            <span></span>
+            <span>首页</span>
+            <span>技术</span>
+            <span>其他</span>
+            <span>联系</span>
+            <span>关于</span>
+        </div>
+        <div class="live-demo">
+            <span>Live Demo</span>
+        </div>
+        <div class="menus-empty-row">
+        </div>
+        <div class="menus-empty-row border-left">
+        </div>
+        <div class="menus-empty-row">
+        </div>
+    </div>
+
+    <div id="slogan">
+        <div>
+            
+        </div>
+        <div class="border-left">
+            <span>路漫漫其修远兮</span>
+            <span>吾将上下而求索 - 屈原</span> 
+        </div>
+        <div class="border-left">
+        </div>
+    </div>
+    
+    <div id="services">
+        <div>
+            
+        </div>
+        <div class="services-container border-left">
+           <div class="order-items">
+                <span class="active">·</span>
+                <span>·</span>
+                <span>·</span>
+           </div>
+           <div class="content">
+                <svg t="1677373703187" 
+                class="langs" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2781" >
+                    <path d="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m294.4 256H682.666667c-12.8-55.466667-34.133333-102.4-59.733334-153.6 76.8 29.866667 145.066667 81.066667 183.466667 153.6zM512 170.666667c34.133333 51.2 64 106.666667 81.066667 170.666666h-162.133334c17.066667-59.733333 46.933333-119.466667 81.066667-170.666666zM183.466667 597.333333c-8.533333-25.6-12.8-55.466667-12.8-85.333333s4.266667-59.733333 12.8-85.333333h145.066666c-4.266667 29.866667-4.266667 55.466667-4.266666 85.333333s4.266667 55.466667 4.266666 85.333333H183.466667z m34.133333 85.333334H341.333333c12.8 55.466667 34.133333 102.4 59.733334 153.6-76.8-29.866667-145.066667-81.066667-183.466667-153.6zM341.333333 341.333333H217.6c42.666667-72.533333 106.666667-123.733333 183.466667-153.6C375.466667 238.933333 354.133333 285.866667 341.333333 341.333333z m170.666667 512c-34.133333-51.2-64-106.666667-81.066667-170.666666h162.133334c-17.066667 59.733333-46.933333 119.466667-81.066667 170.666666z m98.133333-256H413.866667c-4.266667-29.866667-8.533333-55.466667-8.533334-85.333333s4.266667-55.466667 8.533334-85.333333h200.533333c4.266667 29.866667 8.533333 55.466667 8.533333 85.333333s-8.533333 55.466667-12.8 85.333333z m12.8 238.933334c25.6-46.933333 46.933333-98.133333 59.733334-153.6h123.733333c-38.4 72.533333-106.666667 123.733333-183.466667 153.6z m76.8-238.933334c4.266667-29.866667 4.266667-55.466667 4.266667-85.333333s-4.266667-55.466667-4.266667-85.333333h145.066667c8.533333 25.6 12.8 55.466667 12.8 85.333333s-4.266667 59.733333-12.8 85.333333h-145.066667z" p-id="2782" fill="#ffffff"></path>
+                </svg>               
+                <div>
+                <span>路漫漫其修远兮</span>
+                <span>吾将上下而求索 - 屈原</span>
+               </div>
+            </div>
+            <div class="buttons">
+                <div>
+                    <span>VIEW SOLUTIONS</span> 
+                    <img src="">
+                </div>
+            </div>
+        </div>
+        <div class="border-left">
+        </div>
+    </div>
+
+    <div id="case">
+        <div class="bg-case"></div>
+        <div class="border-left bg-case case-container">
+            <div>
+                <img src="https://apenft.io/static/media/footer-partners-nfthub.8408d5b2.svg" alt="" srcset="">
+            </div>
+
+            <div>
+                <img src="https://apenft.io/static/media/footer-partners-nfthub.8408d5b2.svg" alt="" srcset="">
+            </div>
+            <div>
+                <img src="https://apenft.io/static/media/footer-partners-nfthub.8408d5b2.svg" alt="" srcset="">
+            </div>
+            <div>
+                <img src="https://apenft.io/static/media/footer-partners-nfthub.8408d5b2.svg" alt="" srcset="">
+            </div>
+            <div>
+               <span>MORE CLIENTS</span>
+               <span class="line"></span>
+            </div>
+        </div>
+        <div>
+            <div class="white-silder">
+            </div>
+        </div>
+        <div></div>
+    </div>
+
+    <div style="position: relative;">
+        <div id="cates">
+            <div>
+                
+            </div>
+            <div class="cates-container border-left">
+                <div>
+                    <span>求同存异</span>
+                    <span></span>
+                </div>
+                <div>
+                    <span>立以创新</span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="border-left">
+            </div>
+        </div>
+
+        <div id="slogan2">
+            <div>
+            </div>
+            <div class="slogan2-content border-left">
+                <div>
+                    <span>学之广在于不倦</span>
+                    <span>不倦在于固志</span> 
+                </div>
+                <div class="slogan2-content-small">
+                    <span>· 学之广在于不倦</span>
+                    <span>· 不倦在于固志</span>
+                </div>
+            </div>
+            <div class="border-left">
+            </div>
+        </div>
+
+        <div id="infos">
+            <div>
+                
+            </div>
+            <div class="infos-container border-left">
+                <div class="infos-container-img">
+                    <svg t="1677373703187" 
+                    class="langs" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2781" >
+                        <path d="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m294.4 256H682.666667c-12.8-55.466667-34.133333-102.4-59.733334-153.6 76.8 29.866667 145.066667 81.066667 183.466667 153.6zM512 170.666667c34.133333 51.2 64 106.666667 81.066667 170.666666h-162.133334c17.066667-59.733333 46.933333-119.466667 81.066667-170.666666zM183.466667 597.333333c-8.533333-25.6-12.8-55.466667-12.8-85.333333s4.266667-59.733333 12.8-85.333333h145.066666c-4.266667 29.866667-4.266667 55.466667-4.266666 85.333333s4.266667 55.466667 4.266666 85.333333H183.466667z m34.133333 85.333334H341.333333c12.8 55.466667 34.133333 102.4 59.733334 153.6-76.8-29.866667-145.066667-81.066667-183.466667-153.6zM341.333333 341.333333H217.6c42.666667-72.533333 106.666667-123.733333 183.466667-153.6C375.466667 238.933333 354.133333 285.866667 341.333333 341.333333z m170.666667 512c-34.133333-51.2-64-106.666667-81.066667-170.666666h162.133334c-17.066667 59.733333-46.933333 119.466667-81.066667 170.666666z m98.133333-256H413.866667c-4.266667-29.866667-8.533333-55.466667-8.533334-85.333333s4.266667-55.466667 8.533334-85.333333h200.533333c4.266667 29.866667 8.533333 55.466667 8.533333 85.333333s-8.533333 55.466667-12.8 85.333333z m12.8 238.933334c25.6-46.933333 46.933333-98.133333 59.733334-153.6h123.733333c-38.4 72.533333-106.666667 123.733333-183.466667 153.6z m76.8-238.933334c4.266667-29.866667 4.266667-55.466667 4.266667-85.333333s-4.266667-55.466667-4.266667-85.333333h145.066667c8.533333 25.6 12.8 55.466667 12.8 85.333333s-4.266667 59.733333-12.8 85.333333h-145.066667z" p-id="2782" fill="#ffffff"></path>
+                    </svg>         
+                </div>
+                <div>
+                    AI can address unmet needs in the world, and we are committed to making AI more accessible to everyone.
+                </div>
+                <div>
+                    AI can address unmet needs in the world, and we are committed to making AI more accessible to everyone.
+                </div>
+                <div>
+                    <span>01</span>
+                    <span>/</span>
+                    <span>26</span>
+                </div>
+                <div>
+                    ----
+                </div>
+                <div>
+                    ----
+                </div>
+            </div>
+            <div class="border-left">
+            </div>
+            <style>
+                .infos-container-img{
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                }
+            </style>
+        </div>
+
+
+        <div style="position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: -1;">
+            <div class="bar1">
+
+            </div>
+            <div class="bar2">
+
+            </div>
+            <div class="bar3">
+
+            </div>
+            <div class="bar4">
+
+            </div>
+        </div>
+        
+
+    </div>
+    <div id="cates">
+        <div>
+            
+        </div>
+        <div class="cates-container border-left">
+            <div>
+                <span>求同存异</span>
+                <span></span>
+            </div>
+            <div>
+                <span>立以创新</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="border-left">
+        </div>
+    </div>
+
+    <div id="live-demo2">
+        <div>
+            
+        </div>
+        <div class="cates-container border-left">
+            <div>
+                <span>求同存异</span>
+                <span></span>
+            </div>
+            <div>
+                <span>立以创新</span>
+                <span></span>
+            </div>
+        </div>
+        <div class="border-left">
+        </div>
+    </div>
+    <style>
+        .live-demo2{
+            
+        }
+    </style>
+
+</body>
+</html>
