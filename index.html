@@ -74,7 +74,7 @@
             border-left: 2px solid rgba(255,255,255,0.2);
         }
 
-        #slogan,#services,#cates,#slogan2,#infos{
+        #slogan,#services,#cates,#slogan2,#infos,#timeline{
             border-bottom: 2px solid rgba(255,255,255,0.2);
             display: grid;
             grid-template-columns: 1fr 1440px 2fr;
@@ -218,7 +218,6 @@
         .slogan2-content{
             display:grid;
             grid-template-columns: repeat(2,1fr);
-            padding:60px 0;
         }
         .slogan2-content span{
             font-size: 55px!important;
@@ -243,6 +242,26 @@
             border-left: rgba(37,42,15,0.1) 1px solid;
             border-right: rgba(37,42,15,0.1) 1px solid;
         }
+        .dot-1-1{
+            position: absolute;
+            left: -2px;
+            bottom: -1px;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .dot-1-2{
+            position: absolute;
+            right: -2px;
+            bottom: -1px;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
         .bar2{
             width: 100px;
             background:  linear-gradient(to top,rgba(3,42,12,0.2), rgba(37,42,152,0.3),rgba(37,42,152,1));
@@ -252,6 +271,26 @@
             top: 0;
             border-left: rgba(37,42,15,0.1) 1px solid;
             border-right: rgba(37,42,15,0.1) 1px solid;
+        }
+        .dot-2-1{
+            position: absolute;
+            left: -2px;
+            bottom: -1px;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .dot-2-2{
+            position: absolute;
+            right: -2px;
+            bottom: -1px;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #fff;
         }
         .bar3{
             width: 100px;
@@ -263,6 +302,27 @@
             border-left: rgba(37,42,15,0.1) 1px solid;
             border-right: rgba(37,42,15,0.1) 1px solid;
         }
+        .dot-3-1{
+            position: absolute;
+            left: -5px;
+            bottom: 0px;
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            overflow: auto;
+        }
+        .dot-3-2{
+            position: absolute;
+            right: -2px;
+            bottom: -1px;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
         .bar4{
             width: 100px;
             background: linear-gradient(to top,rgba(3,42,12,0.2), rgba(12,11,152,0.1),rgba(37,42,152,1));
@@ -273,15 +333,110 @@
             border-left: rgba(37,42,15,0.1) 1px solid;
             border-right: rgba(37,42,15,0.1) 1px solid;
         }
-
-        #infos{
-            height: 500px;
+        .dot-4-1{
+            position: absolute;
+            left: -2px;
+            bottom: -1px;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .dot-4-2{
+            position: absolute;
+            right: -2px;
+            bottom: -1px;
+            display: block;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #fff;
         }
 
         .infos-container{
             display:grid;
             grid-template-columns: repeat(9,1fr);
-            grid-template-rows: 6;
+            grid-template-rows: repeat(6,1fr);
+        }
+        .infos-container-img{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+        .infos-container-content-1{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 5;
+            font-size: 18px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .infos-container-content-2{
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+            color: #fff;
+            font-size: 14px;
+        }
+        .arrow{
+            color: #fff;
+            font-size: 16px;
+        }
+        .arrow-left{
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 3;
+            grid-column-end: 4; 
+        }
+        .arrow-right{
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 4;
+            grid-column-end: 5; 
+        }
+        .days{
+            grid-row-start: 5;
+            grid-row-end: 6;
+            grid-column-start: 2;
+            grid-column-end: 3; 
+            color: #fff;
+            text-align: center;
+        }
+        #timeline{
+            height: 400px;
+            background-color: #3136a9;
+        }
+        .timeline-title{
+            font-size: 50px;
+            color: #ffF;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+        }
+        .timeline-title .timeline-left span{
+            display: block;
+            line-height: 50px;
+        }
+        .timeline-title .timeline-left span+span{
+            font-size: 18px;
+        }
+        .timeline-title .timeline-right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .timeline-title .timeline-right span{
+            display: inline-block;
+            font-size: 16px;
+            border-bottom: 2px solid #fff;
+        }
+        .timeline-title .timeline-right span{
+            display: inline-block;
         }
     </style>
 </head>
@@ -429,67 +584,64 @@
                         <path d="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m294.4 256H682.666667c-12.8-55.466667-34.133333-102.4-59.733334-153.6 76.8 29.866667 145.066667 81.066667 183.466667 153.6zM512 170.666667c34.133333 51.2 64 106.666667 81.066667 170.666666h-162.133334c17.066667-59.733333 46.933333-119.466667 81.066667-170.666666zM183.466667 597.333333c-8.533333-25.6-12.8-55.466667-12.8-85.333333s4.266667-59.733333 12.8-85.333333h145.066666c-4.266667 29.866667-4.266667 55.466667-4.266666 85.333333s4.266667 55.466667 4.266666 85.333333H183.466667z m34.133333 85.333334H341.333333c12.8 55.466667 34.133333 102.4 59.733334 153.6-76.8-29.866667-145.066667-81.066667-183.466667-153.6zM341.333333 341.333333H217.6c42.666667-72.533333 106.666667-123.733333 183.466667-153.6C375.466667 238.933333 354.133333 285.866667 341.333333 341.333333z m170.666667 512c-34.133333-51.2-64-106.666667-81.066667-170.666666h162.133334c-17.066667 59.733333-46.933333 119.466667-81.066667 170.666666z m98.133333-256H413.866667c-4.266667-29.866667-8.533333-55.466667-8.533334-85.333333s4.266667-55.466667 8.533334-85.333333h200.533333c4.266667 29.866667 8.533333 55.466667 8.533333 85.333333s-8.533333 55.466667-12.8 85.333333z m12.8 238.933334c25.6-46.933333 46.933333-98.133333 59.733334-153.6h123.733333c-38.4 72.533333-106.666667 123.733333-183.466667 153.6z m76.8-238.933334c4.266667-29.866667 4.266667-55.466667 4.266667-85.333333s-4.266667-55.466667-4.266667-85.333333h145.066667c8.533333 25.6 12.8 55.466667 12.8 85.333333s-4.266667 59.733333-12.8 85.333333h-145.066667z" p-id="2782" fill="#ffffff"></path>
                     </svg>         
                 </div>
-                <div>
-                    AI can address unmet needs in the world, and we are committed to making AI more accessible to everyone.
+                <div class="infos-container-content-1">
+                    AI can address unmet needs in the world
                 </div>
-                <div>
-                    AI can address unmet needs in the world, and we are committed to making AI more accessible to everyone.
+                <div class="infos-container-content-2">
+                    AI can address unmet needs in the world, and we are committed to making AI more accessible to everyone., and we are committed to making AI more accessible to everyone.
                 </div>
-                <div>
+                <div class="days">
                     <span>01</span>
                     <span>/</span>
                     <span>26</span>
                 </div>
-                <div>
+                <div class="arrow arrow-left">
                     ----
                 </div>
-                <div>
+                <div class="arrow arrow-right">
                     ----
                 </div>
             </div>
             <div class="border-left">
             </div>
-            <style>
-                .infos-container-img{
-                    grid-column-start: 2;
-                    grid-column-end: 3;
-                    grid-row-start: 2;
-                    grid-row-end: 3;
-                }
-            </style>
         </div>
 
 
         <div style="position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: -1;">
             <div class="bar1">
-
+                <span class="dot-1-1"></span>
+                <span class="dot-1-2"></span>
             </div>
             <div class="bar2">
-
+                <span class="dot-2-1"></span>
+                <span class="dot-2-2"></span>
             </div>
             <div class="bar3">
-
+                <span class="dot-3-1"></span>
+                <span class="dot-3-2"></span>
             </div>
             <div class="bar4">
-
+                <span class="dot-4-1"></span>
+                <span class="dot-4-2"></span>
             </div>
         </div>
         
 
     </div>
-    <div id="cates">
+
+    <div id="timeline">
         <div>
             
         </div>
-        <div class="cates-container border-left">
-            <div>
-                <span>求同存异</span>
-                <span></span>
-            </div>
-            <div>
-                <span>立以创新</span>
-                <span></span>
-            </div>
+        <div class="timeline-title border-left">
+           <div class="timeline-left">
+            <span>Discovery Timeline</span>
+            <span>AI:Can I help you?</span>
+           </div>
+           <div class="timeline-right">
+            <span>AI:Can I help you?</span>
+            <span>AI:Can I help you?</span>
+           </div>
         </div>
         <div class="border-left">
         </div>
@@ -500,23 +652,101 @@
             
         </div>
         <div class="cates-container border-left">
-            <div>
-                <span>求同存异</span>
-                <span></span>
-            </div>
-            <div>
-                <span>立以创新</span>
-                <span></span>
-            </div>
+           22
         </div>
         <div class="border-left">
         </div>
     </div>
-    <style>
-        .live-demo2{
-            
-        }
-    </style>
+<div style="position: relative;">
+        <div id="cates">
+            <div>
+                
+            </div>
+            <div class="cates-container border-left">
+                <div>
+                    <span>求同存异</span>
+                    <span></span>
+                </div>
+                <div>
+                    <span>立以创新</span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="border-left">
+            </div>
+        </div>
 
+        <div id="slogan2">
+            <div>
+            </div>
+            <div class="slogan2-content border-left">
+                <div>
+                    <span>学之广在于不倦</span>
+                    <span>不倦在于固志</span> 
+                </div>
+                <div class="slogan2-content-small">
+                    <span>· 学之广在于不倦</span>
+                    <span>· 不倦在于固志</span>
+                </div>
+            </div>
+            <div class="border-left">
+            </div>
+        </div>
+
+        <div id="infos">
+            <div>
+                
+            </div>
+            <div class="infos-container border-left">
+                <div class="infos-container-img">
+                    <svg t="1677373703187" 
+                    class="langs" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2781" >
+                        <path d="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m294.4 256H682.666667c-12.8-55.466667-34.133333-102.4-59.733334-153.6 76.8 29.866667 145.066667 81.066667 183.466667 153.6zM512 170.666667c34.133333 51.2 64 106.666667 81.066667 170.666666h-162.133334c17.066667-59.733333 46.933333-119.466667 81.066667-170.666666zM183.466667 597.333333c-8.533333-25.6-12.8-55.466667-12.8-85.333333s4.266667-59.733333 12.8-85.333333h145.066666c-4.266667 29.866667-4.266667 55.466667-4.266666 85.333333s4.266667 55.466667 4.266666 85.333333H183.466667z m34.133333 85.333334H341.333333c12.8 55.466667 34.133333 102.4 59.733334 153.6-76.8-29.866667-145.066667-81.066667-183.466667-153.6zM341.333333 341.333333H217.6c42.666667-72.533333 106.666667-123.733333 183.466667-153.6C375.466667 238.933333 354.133333 285.866667 341.333333 341.333333z m170.666667 512c-34.133333-51.2-64-106.666667-81.066667-170.666666h162.133334c-17.066667 59.733333-46.933333 119.466667-81.066667 170.666666z m98.133333-256H413.866667c-4.266667-29.866667-8.533333-55.466667-8.533334-85.333333s4.266667-55.466667 8.533334-85.333333h200.533333c4.266667 29.866667 8.533333 55.466667 8.533333 85.333333s-8.533333 55.466667-12.8 85.333333z m12.8 238.933334c25.6-46.933333 46.933333-98.133333 59.733334-153.6h123.733333c-38.4 72.533333-106.666667 123.733333-183.466667 153.6z m76.8-238.933334c4.266667-29.866667 4.266667-55.466667 4.266667-85.333333s-4.266667-55.466667-4.266667-85.333333h145.066667c8.533333 25.6 12.8 55.466667 12.8 85.333333s-4.266667 59.733333-12.8 85.333333h-145.066667z" p-id="2782" fill="#ffffff"></path>
+                    </svg>         
+                </div>
+                <div class="infos-container-content-1">
+                    AI can address unmet needs in the world
+                </div>
+                <div class="infos-container-content-2">
+                    AI can address unmet needs in the world, and we are committed to making AI more accessible to everyone., and we are committed to making AI more accessible to everyone.
+                </div>
+                <div class="days">
+                    <span>01</span>
+                    <span>/</span>
+                    <span>26</span>
+                </div>
+                <div class="arrow arrow-left">
+                    ----
+                </div>
+                <div class="arrow arrow-right">
+                    ----
+                </div>
+            </div>
+            <div class="border-left">
+            </div>
+        </div>
+
+
+        <div style="position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: -1;">
+            <div class="bar1">
+                <span class="dot-1-1"></span>
+                <span class="dot-1-2"></span>
+            </div>
+            <div class="bar2">
+                <span class="dot-2-1"></span>
+                <span class="dot-2-2"></span>
+            </div>
+            <div class="bar3">
+                <span class="dot-3-1"></span>
+                <span class="dot-3-2"></span>
+            </div>
+            <div class="bar4">
+                <span class="dot-4-1"></span>
+                <span class="dot-4-2"></span>
+            </div>
+        </div>
+        
+
+    </div>
 </body>
 </html>
