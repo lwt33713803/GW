@@ -385,6 +385,10 @@
         .arrow{
             color: #fff;
             font-size: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
         .arrow-left{
             grid-row-start: 5;
@@ -405,6 +409,10 @@
             grid-column-end: 3; 
             color: #fff;
             text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
         }
         #timeline{
             height: 400px;
@@ -437,6 +445,14 @@
         }
         .timeline-title .timeline-right span{
             display: inline-block;
+        }
+        #actions{
+            display: block;
+            height: 200px;
+            width: 100%;
+            background-color: #3136a9;
+            display: grid;
+            grid-template-columns: 1fr 1440px 2fr;
         }
     </style>
 </head>
@@ -585,10 +601,10 @@
                     </svg>         
                 </div>
                 <div class="infos-container-content-1">
-                    AI can address unmet needs in the world
+                    学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学
                 </div>
                 <div class="infos-container-content-2">
-                    AI can address unmet needs in the world, and we are committed to making AI more accessible to everyone., and we are committed to making AI more accessible to everyone.
+                    学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦学之广在于不倦
                 </div>
                 <div class="days">
                     <span>01</span>
@@ -596,10 +612,14 @@
                     <span>26</span>
                 </div>
                 <div class="arrow arrow-left">
-                    ----
+                    <svg t="1677845707378" class="icon" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2047" width="100" height="50">
+                        <path d="M982.4 470.4h-864l84.8-102.4c17.6-17.6 12.8-46.4-4.8-59.2-17.6-17.6-46.4-12.8-59.2 4.8l-120 140.8c-25.6 33.6-25.6 81.6 0 115.2l120 140.8c4.8 12.8 17.6 17.6 30.4 17.6 8 0 20.8-4.8 25.6-8 17.6-17.6 20.8-43.2 4.8-59.2l-84.8-102.4h867.2c25.6 0 43.2-17.6 43.2-43.2 0-27.2-17.6-44.8-43.2-44.8z" p-id="2048" fill="#ffffff"></path>
+                    </svg>
                 </div>
                 <div class="arrow arrow-right">
-                    ----
+                    <svg t="1677845671971" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2723" width="100" height="50">
+                        <path d="M1001.6 452.8l-120-140.8c-17.6-17.6-43.2-20.8-59.2-4.8-17.6 17.6-20.8 43.2-4.8 59.2l84.8 102.4H43.2C17.6 468.8 0 486.4 0 512s17.6 43.2 43.2 43.2h860.8l-84.8 102.4c-17.6 17.6-12.8 46.4 4.8 59.2 8 8 17.6 8 25.6 8 12.8 0 25.6-4.8 33.6-17.6l120-140.8c28.8-27.2 28.8-78.4-1.6-113.6z" p-id="2724" fill="#ffffff"></path>
+                    </svg>
                 </div>
             </div>
             <div class="border-left">
@@ -647,105 +667,52 @@
         </div>
     </div>
 
-    <div id="live-demo2">
-        <div>
-            
+    <div id="actions" style="background-color: #252a98;height: 500px;">
+        <div></div>
+        <div class="border-left" style="display: grid;grid-template-columns: repeat(2,1fr);">
+           1
         </div>
-        <div class="cates-container border-left">
-           22
-        </div>
-        <div class="border-left">
-        </div>
+        <div class="border-left"></div>
     </div>
-<div style="position: relative;">
-        <div id="cates">
-            <div>
-                
-            </div>
-            <div class="cates-container border-left">
-                <div>
-                    <span>求同存异</span>
-                    <span></span>
+
+        <div id="actions">
+            <div></div>
+            <div class="border-left" style="display: grid;grid-template-columns: repeat(2,1fr);">
+                <div style="height: 100%;display: flex;flex-direction: row;justify-content: center;align-items: center;color: #fff;font-size: 24px;">
+                    联系我们
                 </div>
-                <div>
-                    <span>立以创新</span>
-                    <span></span>
+                <div style="background-color: #fff;height: 100%;display: flex;flex-direction: row;justify-content: center;align-items: center;font-size: 24px;">
+                    关于我们
                 </div>
             </div>
+            <div class="border-left" style="background-color: #fff;"></div>
+        </div>
+
+        <div id="actions" style="height: 150px;width: 100%;  background-color: #252a98;">
+            <div></div>
             <div class="border-left">
+               
             </div>
+            <div class="border-left"></div>
         </div>
 
-        <div id="slogan2">
-            <div>
-            </div>
-            <div class="slogan2-content border-left">
-                <div>
-                    <span>学之广在于不倦</span>
-                    <span>不倦在于固志</span> 
-                </div>
-                <div class="slogan2-content-small">
-                    <span>· 学之广在于不倦</span>
-                    <span>· 不倦在于固志</span>
-                </div>
-            </div>
+        <div id="actions" style="height: 500px;width: 100%;  background-color: #252a98;border-top: 2px solid rgba(255,255,255,0.2);">
+            <div></div>
             <div class="border-left">
+               
             </div>
+            <div class="border-left"></div>
         </div>
 
-        <div id="infos">
-            <div>
-                
-            </div>
-            <div class="infos-container border-left">
-                <div class="infos-container-img">
-                    <svg t="1677373703187" 
-                    class="langs" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2781" >
-                        <path d="M512 85.333333C277.333333 85.333333 85.333333 277.333333 85.333333 512s192 426.666667 426.666667 426.666667 426.666667-192 426.666667-426.666667S746.666667 85.333333 512 85.333333z m294.4 256H682.666667c-12.8-55.466667-34.133333-102.4-59.733334-153.6 76.8 29.866667 145.066667 81.066667 183.466667 153.6zM512 170.666667c34.133333 51.2 64 106.666667 81.066667 170.666666h-162.133334c17.066667-59.733333 46.933333-119.466667 81.066667-170.666666zM183.466667 597.333333c-8.533333-25.6-12.8-55.466667-12.8-85.333333s4.266667-59.733333 12.8-85.333333h145.066666c-4.266667 29.866667-4.266667 55.466667-4.266666 85.333333s4.266667 55.466667 4.266666 85.333333H183.466667z m34.133333 85.333334H341.333333c12.8 55.466667 34.133333 102.4 59.733334 153.6-76.8-29.866667-145.066667-81.066667-183.466667-153.6zM341.333333 341.333333H217.6c42.666667-72.533333 106.666667-123.733333 183.466667-153.6C375.466667 238.933333 354.133333 285.866667 341.333333 341.333333z m170.666667 512c-34.133333-51.2-64-106.666667-81.066667-170.666666h162.133334c-17.066667 59.733333-46.933333 119.466667-81.066667 170.666666z m98.133333-256H413.866667c-4.266667-29.866667-8.533333-55.466667-8.533334-85.333333s4.266667-55.466667 8.533334-85.333333h200.533333c4.266667 29.866667 8.533333 55.466667 8.533333 85.333333s-8.533333 55.466667-12.8 85.333333z m12.8 238.933334c25.6-46.933333 46.933333-98.133333 59.733334-153.6h123.733333c-38.4 72.533333-106.666667 123.733333-183.466667 153.6z m76.8-238.933334c4.266667-29.866667 4.266667-55.466667 4.266667-85.333333s-4.266667-55.466667-4.266667-85.333333h145.066667c8.533333 25.6 12.8 55.466667 12.8 85.333333s-4.266667 59.733333-12.8 85.333333h-145.066667z" p-id="2782" fill="#ffffff"></path>
-                    </svg>         
-                </div>
-                <div class="infos-container-content-1">
-                    AI can address unmet needs in the world
-                </div>
-                <div class="infos-container-content-2">
-                    AI can address unmet needs in the world, and we are committed to making AI more accessible to everyone., and we are committed to making AI more accessible to everyone.
-                </div>
-                <div class="days">
-                    <span>01</span>
-                    <span>/</span>
-                    <span>26</span>
-                </div>
-                <div class="arrow arrow-left">
-                    ----
-                </div>
-                <div class="arrow arrow-right">
-                    ----
-                </div>
-            </div>
+        <div id="actions" style="height: 150px;width: 100%;  background-color: #252a98;border-top: 2px solid rgba(255,255,255,0.2);">
+            <div></div>
             <div class="border-left">
+               
             </div>
+            <div class="border-left"></div>
         </div>
 
 
-        <div style="position: absolute;left: 0;right: 0;top: 0;bottom: 0;z-index: -1;">
-            <div class="bar1">
-                <span class="dot-1-1"></span>
-                <span class="dot-1-2"></span>
-            </div>
-            <div class="bar2">
-                <span class="dot-2-1"></span>
-                <span class="dot-2-2"></span>
-            </div>
-            <div class="bar3">
-                <span class="dot-3-1"></span>
-                <span class="dot-3-2"></span>
-            </div>
-            <div class="bar4">
-                <span class="dot-4-1"></span>
-                <span class="dot-4-2"></span>
-            </div>
-        </div>
-        
 
     </div>
 </body>
